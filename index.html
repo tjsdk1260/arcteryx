@@ -49,7 +49,7 @@
                 </button>
                 <form action="#">
                     <label for="search">
-                        <input type="text" placeholder="검색">
+                        <input type="text" placeholder="검색" id="search">
                     </label>
                 </form>
                 <button>
@@ -60,20 +60,20 @@
         <main>
             <section class="main-video">
                 <video src="./video/OBSESSIVE DESIGN.mp4" controls autoplay muted loop width="100%"></video>
-                <button>더 알아보기</button>
             </section>
             <section class="new-item">
+                <h2>New design</h2>
                 <ul class="img-list">
                     <li class="img-item">
                         <a href="#">
                             <img src="./image/m_image/new_image_1.jpg" alt="new item image">
-                            <h3>자켓</h3>
+                            <h3>재킷</h3>
                         </a>
                     </li>
                     <li class="img-item">
                         <a href="#">
                             <img src="./image/m_image/new_image_2.jpg" alt="new item image">
-                            <h3>가방</h3>
+                            <h3>배낭</h3>
                         </a>
                     </li>
                     <li class="img-item">
@@ -85,16 +85,20 @@
                     <li class="img-item">
                         <a href="#">
                             <img src="./image/m_image/new_image_4.jpg" alt="new item image">
-                            <h3>모자</h3>
+                            <h3>악세사리</h3>
                         </a>
                     </li>
                 </ul>
-                <div class="banner">
-                    <h3>What's new</h3>
-                    <p></p>
-                    <a href="#">바로가기</a>
-                </div>
             </section>
+            <article>
+                <div class="banner">
+                    <div>
+                        <h3>What's new</h3>
+                        <p>새로운 디자인</p>
+                        <a href="#">바로가기</a>
+                    </div>
+                </div>
+            </article>
             <section class="gift">
                 <img src="./image/m_image/gift-image.jpg" alt="gift image">
                 <div class="gift-content">
@@ -104,7 +108,9 @@
                         thoughtful<br>
                         gifts.
                     </h2>
-                    <p>당신의 완벽한 아웃도어 경험을 위해 특별함을 선물 하세요.</p>
+                    <p>당신의 완벽한 아웃도어 경험을 위해<br>
+                        특별함을 선물 하세요.
+                    </p>
                 </div>
                 <div class="giftBtn">
                     <a href="#">gifts for her</a>
@@ -112,10 +118,23 @@
                 </div>
             </section>
             <section class="jacket-finder">
-                <h3>아크테릭스 재킷 파인더</h3>
-                <p>자유로운 움직임, 하루종일 쾌적한 착용감, 오직 아웃도어 활동에만 집중하도록 도와주는 보온력과 기능성까지. 아크테릭스 재킷 파인더와 함께 당신에게 꼭 맞는 아웃도어의 동반자를 찾아보세요.</p>
-                <a href="#">WOMEN'S</a>
-                <a href="#">MEN'S</a>
+                <img src="./image/m_image/jacketfinder-image.jpg" alt="jacket finder image">
+                <div class="finder-content">
+                    <h2>Arc'teryx<br>
+                        jacket finder</h2>
+                    <p>자유로운 움직임,<br>
+                        하루종일 쾌적한 착용감,<br>
+                        오직 아웃도어 활동에만 집중하도록<br>
+                        도와주는 보온력과 기능성까지.<br>
+                        아크테릭스 재킷 파인더와 함께<br>
+                        당신에게 꼭 맞는 아웃도어의<br>
+                        동반자를 찾아보세요.
+                    </p>
+                </div>
+                <div class="finderBtn">
+                    <a href="#">WOMEN'S</a>
+                    <a href="#">MEN'S</a>
+                </div>
             </section>
         </main>
         <footer>
@@ -130,6 +149,7 @@
                 <li><a href="#">고객센터</a></li>
                 <li><a href="#">반품환불</a></li>
             </ul>
+            <hr/>
             <div class="sns">
                 <ul>
                     <li><a href="https://www.facebook.com/arcteryxkorea" class="fb"><i class="fa-brands fa-facebook-f"></i></a></li>
@@ -137,8 +157,10 @@
                     <li><a href="https://www.youtube.com/user/nelson6394" class="yb"><i class="fa-brands fa-youtube"></i></a></li>
                 </ul>
             </div>
+            <span>이용약관</span>
+            <span>개인정보취급방침</span>
+            <hr/>
             <div>
-                <span>개인정보취급방침 | 이용약관</span>
                 <span>(주)넬슨스포츠 대표자 | 정호진</span>
                 <span>주소 : 경기도 고양시 일산동구 호수로 358-39 (동문타워I) 710호, 711호, 712호 (주)넬슨스포츠</span>
                 <span>전화:1644-1708|사업자등록번호 : 128-81-33017[사업자정보확인]</span>

@@ -8,3 +8,9 @@ goTop.addEventListener('click',function(){
         behavior:"smooth"
     });
 });
+
+goBottom.addEventListener('click',function(){
+    window.scrollTo({ 
+        top: document.body.scrollHeight, behavior: "smooth" 
+    });
+});
