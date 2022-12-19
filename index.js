@@ -7,16 +7,23 @@ closePopup.addEventListener('click',function(){
 //스크롤 내리면 헤더 고정
 let fixed = document.querySelector('header');
 window.addEventListener('scroll',function(){
+    fixed.style.minWidth = '480px';
+    fixed.style.maxWidth = '768px';
     fixed.style.position = 'fixed';
 });
 //메뉴 클릭시
-let makeMenu2 = ['의류','배낭','클라이밍 장비', '악세사리','활동별 분류'];
-//메뉴 닫기
-let gnb = document.querySelector('nav');
-let closeBtn = document.querySelector('.closeBtn');
-closeBtn.addEventListener('click',function(){
-    gnb.style.display = 'none';
+let checked = document.querySelector('.menubar');
+let gnb = document.querySelector('.gnb');
+let checkBox = document.querySelector('#check');
+checkBox.addEventListener('change',function(){
+    if(this.checked){
+        gnb.style.top = '50%';
+    }else{
+        gnb.style.top = '-300%';
+    }
 });
+
+let makeMenu2 = ['의류','배낭','클라이밍 장비', '악세사리','활동별 분류'];
 //검색창
 let searchBtn = document.querySelector('.searchBtn');
 let search = document.querySelector('.search');
@@ -29,6 +36,8 @@ closeSearch[1].addEventListener('click',function(){
     search.classList.remove('on');
 });
 //gift 스크롤 애니메이션
+let giftImg = document.querySelector('.gift>img');
+console.log(giftImg);
 let giftContent = document.querySelector('.gift-content');
 
 window.addEventListener('scroll',function(){
@@ -38,7 +47,7 @@ window.addEventListener('scroll',function(){
     if(value==1260){
         giftContent.style.animation = 'slide 2s ease-out';
     }
-    else if(value>1960){
+    else if(value>2000){
         giftContent.style.animation = 'disappear 2s ease-out forwards';
     }
     else{
