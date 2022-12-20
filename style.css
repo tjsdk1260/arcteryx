@@ -91,11 +91,11 @@ header{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    display: flex;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 1000px;
     background-color: #000;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -111,10 +111,6 @@ input[type=checkbox]:checked ~ .gnb{
     opacity: 1;
     width: 2000px;
     height: 2000px;
-    display: flex;
-}
-.menu-list{
-    height: 0;
 }
 input[type=checkbox]:checked ~ .gnb>.menu-list{
     height: auto;
@@ -130,16 +126,12 @@ input[type=checkbox]:checked ~ .gnb>.menu-list{
     margin-left: 10px;
     animation: arrow .8s infinite;
 }
-.gnb>.closeBtn{
-    position: fixed;
-    top:20px;
-    right: 20px;
+.gnb>.fa-xmark{
+    cursor: pointer;
     font-size: 22px;
     background-color: transparent;
-    cursor: pointer;
-}
-.closeBtn>i{
     color: #fff;
+    margin-left: 210px;
 }
 .login{
     margin-right: 5px;
@@ -159,6 +151,15 @@ input[type=checkbox]:checked ~ .gnb>.menu-list{
 @keyframes arrow {
     from{transform: translateX(0);}
     to{transform: translateX(8px);}    
+}
+.men,
+.women{
+    color: #fff;
+    border: 1px solid red;
+}
+.menu-list2>li>a{
+    color: #fff;
+    font-size: 16px;
 }
 .hot-menu{
     position: absolute;
@@ -217,7 +218,8 @@ video::-webkit-media-controls-panel{
     height: 500px;
     overflow-x: scroll;}
 .new-item::-webkit-scrollbar{
-    width: 10px;
+    width: 50px;
+    height: 15px;
 }
 .new-item::-webkit-scrollbar-track{
     background-color: transparent;
@@ -305,24 +307,16 @@ article{
     height: auto;
 }
 .gift>img{
+    transform: scale(1.2);
+  
     margin-left: 20px;
     margin-right: 20px;
    width: 87%;}
+.gift>img:hover{
+transform: scale(1);
+}
 .gift-content{
-    margin:30px 0 0 20px;
-    /* animation: slide 2s ease-out; */}
-@keyframes slide {
-    from{transform: translatex(-100px);
-        opacity: 0;}
-    to{transform: translatex(0);
-        opacity: 1;}
-}
-@keyframes disappear{
-    from{transform: translatex(0);
-        opacity: 1;}
-    to{transform: translatex(-100px);
-        opacity: 0;}
-}
+    margin:30px 0 0 20px;}
 .gift-content>h2{
     margin-bottom: 15px;
     text-transform: uppercase;
@@ -375,6 +369,18 @@ article{
     transition: all .3s ease-out;
     background-color: rgb(66, 66, 66);
 }
+@keyframes slide {
+    from{transform: translatex(-100px);
+        opacity: 0;}
+    to{transform: translatex(0);
+        opacity: 1;}
+}
+@keyframes disappear{
+    from{transform: translatex(0);
+        opacity: 1;}
+    to{transform: translatex(-100px);
+        opacity: 0;}
+}
 footer{
     margin-top: 80px;
     position: relative;
@@ -405,6 +411,10 @@ footer>span>i{
 .accordion.active{
     height: 100px;
     opacity: 1;
+}
+.fa-plus.active{
+    transform: rotate(45deg);
+    transition: transform .4s ease-out;
 }
 .accordion>li{
     margin-bottom: 5px;
