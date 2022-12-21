@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>아크테릭스</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/66c9b6e88e.js"crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    </style>
 </head>
 <body>
     <div class="container">
@@ -20,46 +23,49 @@
                     <i class="fa-solid fa-bars"></i>
                 </div>
                 <nav class="gnb">
-                    <i class="fa-solid fa-xmark"></i>
-                    <div>
-                        <button class="login">로그인</button>
-                        <button class="sign-up">회원가입</button>
-                    </div>
-                   
-                    <ul class="menu-list">
-                        <li class="men-btn"><a href="#">Men<i class="fa-solid fa-chevron-right"></i></a></li>
-                        <li class="women-btn"><a href="#">Women<i class="fa-solid fa-chevron-right"></i></a></li>
-                        <li><a href="#">Outlet</a></li>
-                        <li><a href="#">Explore</a></li>
-                        <li><a href="#">고객센터</a></li>
-                        <li><a href="#">공지사항</a></li>
-                        <li><a href="#">이벤트</a></li>
-                    </ul>
-                    <div class="men">
-                        <span><i class="fa-solid fa-chevron-left"></i>전체</span>
-                        <h3>Men</h3>
-                        <ul class="menu-list2">
-                            <li><a href="#">의류</a>
-                            </li>
-                            <li><a href="#">배낭</a></li>
-                            <li><a href="#">신발</a></li>
-                            <li><a href="#">클라이밍 장비</a></li>
-                            <li><a href="#">악세사리</a></li>
-                            <li><a href="#">활동별 분류</a></li>
+                    <div class="menu1">
+                        <div>
+                            <button class="login">로그인</button>
+                            <button class="sign-up">회원가입</button>
+                        </div>
+                        <ul class="menu-list">
+                            <li class="men-btn"><a href="#">Men<i class="fa-solid fa-chevron-right"></i></a></li>
+                            <li class="women-btn"><a href="#">Women<i class="fa-solid fa-chevron-right"></i></a></li>
+                            <li><a href="#">Outlet</a></li>
+                            <li><a href="#">Explore</a></li>
+                            <li><a href="#">고객센터</a></li>
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">이벤트</a></li>
+                            <li><i class="fa-solid fa-xmark"></i></li>
                         </ul>
                     </div>
-                    <div class="women">
-                        <span><i class="fa-solid fa-chevron-left"></i>전체</span>
-                        <h3>Women</h3>
-                        <ul class="menu-list2">
-                            <li><a href="#">의류</a>
-                            </li>
-                            <li><a href="#">배낭</a></li>
-                            <li><a href="#">신발</a></li>
-                            <li><a href="#">클라이밍 장비</a></li>
-                            <li><a href="#">악세사리</a></li>
-                            <li><a href="#">활동별 분류</a></li>
-                        </ul>
+                    <div class="menu2">
+                        <div class="men">
+                            <span><a href="#"><i class="fa-solid fa-chevron-left"></i>  전체</a></span>
+                            <h3>Men</h3>
+                            <ul class="menu-list2">
+                                <li><a href="#">의류</a>
+                                </li>
+                                <li><a href="#">배낭</a></li>
+                                <li><a href="#">신발</a></li>
+                                <li><a href="#">클라이밍 장비</a></li>
+                                <li><a href="#">악세사리</a></li>
+                                <li><a href="#">활동별 분류</a></li>
+                            </ul>
+                        </div>
+                        <div class="women">
+                            <span><a href="#"><i class="fa-solid fa-chevron-left"></i>  전체</a></span>
+                            <h3>Women</h3>
+                            <ul class="menu-list2">
+                                <li><a href="#">의류</a>
+                                </li>
+                                <li><a href="#">배낭</a></li>
+                                <li><a href="#">신발</a></li>
+                                <li><a href="#">클라이밍 장비</a></li>
+                                <li><a href="#">악세사리</a></li>
+                                <li><a href="#">활동별 분류</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </nav>
             </label>
@@ -143,7 +149,7 @@
             </article>
             <section class="gift">
                 <img src="./image/m_image/gift-image.jpg" alt="gift image">
-                <div class="gift-content">
+                <div class="gift-content" id="gift-content">
                     <h2>
                         thoughtful<br>
                         designs make<br>
@@ -189,8 +195,13 @@
                 <li><a href="#">배송현황</a></li>
                 <li><a href="#">고객센터</a></li>
                 <li><a href="#">반품환불</a></li>
-            <hr/>
             </ul>
+            <hr/>
+            <span class="footer-login">
+                <a href="#">
+                    <i class="fa-solid fa-user"></i> 로그인
+                </a>
+            </span>
             <div class="sns">
                 <ul>
                     <li><a href="https://www.facebook.com/arcteryxkorea" class="fb"><i class="fa-brands fa-facebook-f"></i></a></li>

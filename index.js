@@ -1,32 +1,49 @@
 //스크롤 내리면 헤더 고정
 let fixed = document.querySelector('header');
 window.addEventListener('scroll',function(){
-    fixed.style.minWidth = '480px';
+    fixed.style.minWidth = '320px';
     fixed.style.maxWidth = '768px';
     fixed.style.position = 'fixed';
 });
 //메뉴 클릭시
-// let checked = document.querySelector('.menubar');
-// let gnb = document.querySelector('.gnb');
-// let checkBox = document.querySelector('#check');
-// checkBox.addEventListener('change',function(){
-//     if(this.checked){
-//         gnb.style.top = '50%';
-//     }else{
-//         gnb.style.top = '-300%';
-//     }
-// });
+let checked = document.querySelector('.menubar');
+let gnb = document.querySelector('.gnb');
+let checkBox = document.querySelector('#check');
+checkBox.addEventListener('change',function(){
+    if(this.checked){
+        gnb.style.top = '50%';
+    }else{
+        gnb.style.top = '-300%';
+    }
+});
 
 //men&women 메뉴 클릭
-// let menBtn = document.querySelector('.men-btn');
-// let womenBtn = document.querySelector('women-btn');
+let menu1 = document.querySelector('.menu1'),
+    menu2 = document.querySelector('.menu2'),
+    menu2Men = document.querySelector('.menu2>.men'),
+    menu2Women = document.querySelector('.menu2>.women'),
+    allMen = document.querySelector('.men>span'),
+    allWomen = document.querySelector('.women>span');
+let menBtn = document.querySelector('.men-btn');
+let womenBtn = document.querySelector('.women-btn');
 
-// menBtn.addEventListener('click',()=>{
-    
-// });
-// womenBtn.addEventListener('click',()=>{
-    
-// });
+menBtn.addEventListener('click',()=>{
+    menu2Men.style.display = 'block';
+    menu1.style.display = 'none';
+});
+womenBtn.addEventListener('click',()=>{
+    menu2Women.style.display = 'block';
+    menu1.style.display = 'none';
+});
+
+allMen.addEventListener('click',()=>{
+    menu1.style.display = 'block';
+    menu2Men.style.display = 'none';
+});
+allWomen.addEventListener('click',()=>{
+    menu1.style.display = 'block';
+    menu2Women.style.display = 'none';
+});
 //검색창
 let searchBtn = document.querySelector('.searchBtn');
 let search = document.querySelector('.search');
@@ -39,23 +56,26 @@ closeSearch[1].addEventListener('click',function(){
     search.classList.remove('on');
 });
 // 스크롤 애니메이션
-let video = document.querySelector('.main-video');
-let giftImg = document.querySelector('.gift>img');
 let giftContent = document.querySelector('.gift-content');
 let finderContent = document.querySelector('.finder-content');
-console.log(finderContent);
+
 window.addEventListener('scroll',function(){
+    let giftHeight = document.querySelector('#gift-content').offsetTop;
+    let giftHeight2 = document.querySelector('.giftBtn').offsetTop;
+    let windowHeight =this.window.innerHeight;
     let value = window.scrollY;
     console.log('scrollY',value);  
-    if(value==1400){
+    console.log(giftHeight-windowHeight, value,giftHeight2-100)
+    if(giftHeight-windowHeight<=value && value<=giftHeight2-100){
         giftContent.style.animation = 'slide 2s ease-out';
     }
-    else if(value>1900){
+    else {
         giftContent.style.animation = 'disappear 2s ease-out forwards';
     }
-    else{
-        giftContent.style.animation = 'slide 2s ease-out';
-    }
+
+    let finderHeight = this.document.querySelector('.finder-content').offsetTop,
+        finderHeight2 = this.document.querySelector('.finderBtn');
+    
 });
 //도움말 아코디언
 let help = document.querySelector('.help'),
