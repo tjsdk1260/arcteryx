@@ -92,6 +92,7 @@ input[type=checkbox]:checked ~ .gnb>.menu-list{
 }
 .menu-list>li:last-child>.fa-xmark{
     cursor: pointer;
+    margin-top: 5px;
     font-size: 22px;
     background-color: transparent;
     color: #fff;
@@ -403,9 +404,13 @@ footer>span>i{
     color: #fff;
 }
 .footer-login>a{
+    color: #7e7e7e;
+    text-decoration: underline;
+}
+.footer-login>a:hover{
+    transition: all .4s ease-out;
     color: #fff;
 }
-
 .accordion + hr{
     border-color: #3a3a3a;
     margin:0 5px;

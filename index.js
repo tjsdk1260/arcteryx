@@ -74,7 +74,13 @@ window.addEventListener('scroll',function(){
     }
 
     let finderHeight = this.document.querySelector('.finder-content').offsetTop,
-        finderHeight2 = this.document.querySelector('.finderBtn');
+        finderHeight2 = this.document.querySelector('.finderBtn').offsetTop;
+    if(finderHeight-windowHeight<=value && value<=finderHeight2-100){
+        finderContent.style.animation = 'slide 2s ease-out';
+    }
+    else{
+        finderContent.style.animation = 'disappear 2s ease-out forwards';
+    }
     
 });
 //도움말 아코디언
