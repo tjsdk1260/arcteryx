@@ -415,7 +415,6 @@ footer>span>i{
 }
 .footer-login>a{
     color: #7e7e7e;
-    text-decoration: underline;
 }
 .footer-login>a:hover{
     transition: all .4s ease-out;
@@ -430,6 +429,7 @@ footer>span>i{
 }
 .sns>ul{
     display: flex;
+    margin-left: 6px;
 }
 .sns li{
     margin: 10px;
