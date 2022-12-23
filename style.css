@@ -146,6 +146,7 @@ input[type=checkbox]:checked ~ .gnb>.menu-list{
     transform: translateY(-50%);
 }
 .hot-menu i{
+    color: #000;
     font-size: 20px;
 }
 .searchBtn{
@@ -165,6 +166,7 @@ input[type=checkbox]:checked ~ .gnb>.menu-list{
 }
 .search i{
     font-size: 23px;
+    color: #000;
 }
 .search>form{
     width: 90%;
