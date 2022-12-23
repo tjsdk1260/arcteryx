@@ -146,11 +146,14 @@ input[type=checkbox]:checked ~ .gnb>.menu-list{
     transform: translateY(-50%);
 }
 .hot-menu i{
-    color: #000;
     font-size: 20px;
 }
 .searchBtn{
     margin-right: 10px;
+}
+.searchBtn>i,
+.cart>i{
+    color: #000;
 }
 .search{
     display: none;
@@ -166,6 +169,8 @@ input[type=checkbox]:checked ~ .gnb>.menu-list{
 }
 .search i{
     font-size: 23px;
+}
+.search>button>li{
     color: #000;
 }
 .search>form{
