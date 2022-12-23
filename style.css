@@ -170,7 +170,7 @@ input[type=checkbox]:checked ~ .gnb>.menu-list{
 .search i{
     font-size: 23px;
 }
-.search>button>li{
+.search>button>i{
     color: #000;
 }
 .search>form{
