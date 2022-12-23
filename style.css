@@ -167,14 +167,18 @@ input[type=checkbox]:checked ~ .gnb>.menu-list{
 .search.on{
     display:flex;
 }
-.search i{
-    font-size: 23px;
+.search>button:first-child{
+    margin-left: 5px;
+}
+.search>button>:last-child{
+    margin-right: 5px;
 }
 .search>button>i{
     color: #000;
+    font-size: 23px;
 }
 .search>form{
-    width: 90%;
+    width: 85%;
 }
 .search>form>label{
     line-height: 60px;
