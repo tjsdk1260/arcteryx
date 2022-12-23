@@ -270,7 +270,7 @@ article{
 .banner h3,
 .banner p{
     color: #fff;
-     text-shadow:0px 2px 5px rgb(0,0,0,0.3);
+     text-shadow:0px 2px 5px rgb(0,0,0,0.2);
 }
 .banner h3{
     font-size: 25px;
@@ -410,6 +410,9 @@ footer>span>i{
 .accordion>li>a:hover{
     color: #fff;
 }
+.footer-login{
+    margin-top: 7px;
+}
 .footer-login>a{
     color: #7e7e7e;
     text-decoration: underline;
@@ -423,7 +426,7 @@ footer>span>i{
     margin:0 5px;
 }
 .sns{
-    margin-top: 10px;
+    margin-top: 5px;
 }
 .sns>ul{
     display: flex;
@@ -447,6 +450,10 @@ footer>div:nth-of-type(2){
     display: flex;
     flex-direction: column;
     padding: 8px 15px 20px 15px;
+}
+footer>span:nth-of-type(3),
+footer>span:nth-of-type(4){
+    color: #7e7e7e;
 }
 .go-top,
 .go-bottom{
