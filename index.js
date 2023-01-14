@@ -6,17 +6,15 @@ window.addEventListener('scroll',function(){
     fixed.style.position = 'fixed';
 });
 //메뉴 클릭시
-let checked = document.querySelector('.menubar');
+let menuBar = document.querySelector('.menubar');
 let gnb = document.querySelector('.gnb');
-let checkBox = document.querySelector('#check');
-checkBox.addEventListener('change',function(){
-    if(this.checked){
-        gnb.style.top = '50%';
-    }else{
-        gnb.style.top = '-300%';
-    }
+let closeBtn = document.querySelector('.closeBtn');
+menuBar.addEventListener('click',function(){
+    gnb.classList.add('on');
 });
-
+closeBtn.addEventListener('click',function(){
+    gnb.classList.remove('on');
+});
 //men&women 메뉴 클릭
 let menu1 = document.querySelector('.menu1'),
     menu2 = document.querySelector('.menu2'),
@@ -67,19 +65,19 @@ window.addEventListener('scroll',function(){
     console.log('scrollY',value);  
     console.log(giftHeight-windowHeight, value,giftHeight2-100)
     if(giftHeight-windowHeight<=value && value<=giftHeight2-100){
-        giftContent.style.animation = 'slide 2s ease-out';
+        giftContent.style.animation = 'slide 1s ease-out';
     }
     else {
-        giftContent.style.animation = 'disappear 2s ease-out forwards';
+        giftContent.style.animation = 'disappear 1s ease-out forwards';
     }
 
     let finderHeight = this.document.querySelector('.finder-content').offsetTop,
         finderHeight2 = this.document.querySelector('.finderBtn').offsetTop;
     if(finderHeight-windowHeight<=value && value<=finderHeight2-100){
-        finderContent.style.animation = 'slide 2s ease-out';
+        finderContent.style.animation = 'slide 1s ease-out';
     }
     else{
-        finderContent.style.animation = 'disappear 2s ease-out forwards';
+        finderContent.style.animation = 'disappear 1s ease-out forwards';
     }
     
 });
